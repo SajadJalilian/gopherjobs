@@ -33,10 +33,6 @@ func getConnection(dbName string) (*sql.DB, error) {
 		db  *sql.DB
 	)
 
-	if db != nil {
-		return db, nil
-	}
-
 	// Init SQLite3 database
 	db, err = sql.Open("sqlite3", dbName)
 	if err != nil {
